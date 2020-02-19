@@ -4,7 +4,7 @@ let baseUrl = `https://www.forverkliga.se/JavaScript/api/crud.php?key=${key}`;
 init();
 
 
-document.querySelector('#refresh').addEventListener('click', async () => {
+document.querySelector('#newKey').addEventListener('click', async () => {
 
     let url = `https://www.forverkliga.se/JavaScript/api/crud.php?requestKey`;
 
