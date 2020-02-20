@@ -2,24 +2,81 @@ body {
     background-color: white;
 }
 
+#keyInfo {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    width: 40%;
+    text-align: center;
+    border: 1px;
+    border-style: solid;
+    border-color: black;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
 #newKey {
     background-color: white;
-    border-color: pink;
+    border-color: rgba(255, 192, 203, 0.3);
     padding: 10px 20px;
-    font-size: 0.5 em;
+    font-size: 0.7em;
     border-radius: 4px;
+    margin-top: 10px;
 }
 
 #newKey:hover {
-    background-color: pink;
+    background-color: rgba(255, 192, 203, 0.3);
+}
+
+#theNewKey {
+    width: 8em;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: rgba(255, 192, 203, 0.3);
 }
 
 .theBooks {
     margin: auto;
+    margin-top: 150px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
     width: 40%;
     text-align: center;
     border-color: black;
     border-style: solid;
     border-width: 1px;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#justBooks {
+    width: 16em;
+    text-align: left;
+    margin: auto;
+}
+
+.newBook {
+    margin: auto;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+    width: 40%;
+    text-align: center;
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+#title {
+    margin: 10px;
+}
+
+#author {
+    margin: 10px;
+}
+
+#addButton {
+    margin-top: 10px;
+    margin-bottom: 30px
+}
+
+ul {
+    list-style-image: url('../open-book.png')
 }

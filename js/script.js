@@ -1,7 +1,8 @@
 let key = `gUKrM`;  // once you have a key, it is ok to store it in a variable
-let newKey;
+let newKey;         //ifall användaren vill skaffa en ny key.
 let baseUrl = `https://www.forverkliga.se/JavaScript/api/crud.php?key=${key}`;
-init();
+let status;
+init(); //anropar funktionen direkt så att böckerna som finns visas från början.
 
 
 document.querySelector('#newKey').addEventListener('click', async () => {
@@ -14,15 +15,18 @@ document.querySelector('#newKey').addEventListener('click', async () => {
     if(data.status == 'success'){
       // update newkey el.
       newKey = data.key
+      document.querySelector(`#theNewKey`).innerHTML = "your new key:<br>" + newKey;
     }
 console.log(newKey)
 
 })
+//fixa här så att newKey visas på sidan och inte bara i konsollen.
+//tänker kanske att man kan ha en variabel med värdet "Status", skriver den variabeln
+//I html och sedan med JS ändrar värdet till success/fail beroende på.
 
 ////////////////////////////////////////////////////////////////////////////
 
-// events
-
+//Fixa så att success/failure visas på sidan och inte bara i konsollen.
 async function getBooks(){
 
     console.log(`Getting books from server...`);
@@ -81,7 +85,8 @@ document.querySelector(`#addButton`).addEventListener(`click`, async () => {
         updateBookList(books);
     } else {
         // Error to display
-        document.querySelector(`#books`).innerHTML = `The server is down.`;
+        document.querySelector(`#books`).innerHTML = `API request failed.`;
+        //visar för användaren om API-anropen misslyckats.
     }
     
     // reset input
@@ -130,7 +135,8 @@ async function newBook(book){
 
             if(data.status !== `success`) {
                 if(attempts >= maxAttempts){
-                
+                    
+                    
                     return `No Success after ${maxAttempts} attempts.`
                 
                 } else {
@@ -157,8 +163,9 @@ async function init() {
 
     if(Array.isArray(books)){
         updateBookList(books);
+        document.querySelector(`#status`).innerHTML = `API request successful.`
     } else {
         // Error to display
-        document.querySelector(`#books`).innerHTML = `The server is down.`;
+        document.querySelector(`#books`).innerHTML = `API request failed.`;
     }
 };   

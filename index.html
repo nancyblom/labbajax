@@ -8,17 +8,27 @@
 </head>
 
 <body>
-    <button id="newKey">create new key</button>
-    <p id=theNewKey></p>
+        <div class="theBooks">
+        <h2>my books</h2>
+        <div id=justBooks>
+            <ul id="books">
+            
+            </ul>
+        </div>
+        
+    </div>
 
-    <div class="theBooks">
+    <div class="newBook">
         <h2>add new book</h2>
         <input type="text" id="title" placeholder="title">
         <input type="text" id="author" placeholder="author">
         <button id="addButton">add to list</button>
-        <ul id="books">
-            
-        </ul>
+    </div>
+
+    <div id=keyInfo>
+        <button id="newKey">create new key</button>
+        <p id=theNewKey></p>
+        <p id=status></p>
     </div>
 
     <script src="js/script.js"></script>
