@@ -98,7 +98,7 @@ function updateBookList(books){
     books.forEach(book => {
       
         let el = document.createElement(`li`);
-        el.innerHTML = book.title;
+        el.innerHTML = book.title + " by " +  book.author;
 
         document.querySelector(`#books`).appendChild(el);
 

@@ -1,0 +1,25 @@
+body {
+    background-color: white;
+}
+
+#newKey {
+    background-color: white;
+    border-color: pink;
+    padding: 10px 20px;
+    font-size: 0.5 em;
+    border-radius: 4px;
+}
+
+#newKey:hover {
+    background-color: pink;
+}
+
+.theBooks {
+    margin: auto;
+    width: 40%;
+    text-align: center;
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
